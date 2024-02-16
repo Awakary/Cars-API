@@ -6,15 +6,9 @@ from rest_framework import routers
 
 router = routers.SimpleRouter()
 router.register(r'cars', CarViewSet)
-
-router2 = routers.SimpleRouter()
-router2.register(r'producters', ProducterViewSet)
-
-router3 = routers.SimpleRouter()
-router3.register(r'countries', CountryViewSet)
-
-router4 = routers.SimpleRouter()
-router4.register(r'comments', CommentViewSet)
+router.register(r'producters', ProducterViewSet)
+router.register(r'countries', CountryViewSet)
+router.register(r'comments', CommentViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
