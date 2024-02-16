@@ -9,7 +9,7 @@ class Country(models.Model):
     name = models.CharField(max_length=255,verbose_name="Имя")
 
     def __str__(self):
-        return f'{self.name}'
+        return self.name
 
 
 class Producter(models.Model):
@@ -21,7 +21,7 @@ class Producter(models.Model):
     country = models.ForeignKey('Country', on_delete=models.CASCADE, verbose_name="Страна", related_name='producters')
 
     def __str__(self):
-        return f'{self.name}'
+        return self.name
 
 
 class Car(models.Model):
@@ -34,7 +34,7 @@ class Car(models.Model):
     last_year = models.IntegerField(verbose_name="Год оконания выпуска")
 
     def __str__(self):
-        return f'{self.name}'
+        return self.name
 
 class Comment(models.Model):
     class Meta:
@@ -46,4 +46,4 @@ class Comment(models.Model):
     text = models.CharField(max_length=512, verbose_name="Комментарий")
 
     def __str__(self):
-        return f'{self.text}'
+        return self.text
