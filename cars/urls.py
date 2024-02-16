@@ -13,9 +13,6 @@ router.register(r'comments', CommentViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api/', include(router2.urls)),
-    path('api/', include(router3.urls)),
-    path('api/', include(router4.urls)),
     path('api/report/producters', ExportCSVProducters.as_view(),
          ),
     path('api/report/cars', ExportCSVCars.as_view(),
